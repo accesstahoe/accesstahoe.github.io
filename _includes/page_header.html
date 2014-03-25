@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="container">
+      
+    <h1 class="logo">
+      <a href="/">{{ site.name }}</a>
+    </h1>
+      
+    
+      
+    <ul class="navigation">
+      
+      {% for link in site.data.navigation %}
+        
+        {% assign url = page.url|remove:'index.html' %}
+        
+        <li {% if url == link.url %}class="active {{link.class}}"{% endif %}>
+          <a href="{{link.url}}" title="{{link.text}}">
+            {{link.text}}
+          </a>
+        </li>
+        
+      {% endfor %}
+      
+    </ul>
+      
+  </div>
+</div>

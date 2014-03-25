@@ -1,0 +1,26 @@
+{% assign page_id = page.url|remove:'/'|remove:'.html' %}
+
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+  
+  <body id="{{page_id}}">
+
+    <div id="page">
+
+      {% include page_header.html %}
+    
+      <div class="page-body">
+        <div class="container">
+          {{ content }}
+        </div>
+      </div>
+    
+      {% include page_footer.html %}
+
+    </div>
+
+  </body>
+
+</html>
